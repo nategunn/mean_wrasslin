@@ -1,0 +1,27 @@
+<div ng-controller='WrasslerController'>
+	<table>
+		<tr>
+			<th>choose wrassler:</th>
+			<th></th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Finisher</th>
+			<th>HP</th>
+			<th></th>
+		</tr>
+
+		<tr ng-repeat='wrassler in wrasslers'>
+			<td><button ng-click='choose(wrassler._id)'>pick me brother!</button></td>
+			<td><img src={{wrassler.img}} alt={{wrassler.name}} height='50' ></td>
+			<td>{{wrassler.name}}</td>
+			<td>{{wrassler.age}}</td>
+			<td>{{wrassler.finisher}}</td>
+			<td>{{wrassler.hp}}</td>
+			<td><button ng-click='damage(wrassler._id)'>strike</button></td>
+		</tr>
+	</table>
+
+	
+</div>
+
+<!-- in the controller collect user name and the wrestler data and create a new user that has all the necessary attributes -->

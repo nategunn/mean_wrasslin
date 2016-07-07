@@ -1,0 +1,23 @@
+<div ng-controller='WrasslerController'>
+	<table>
+		<tr>
+			<th></th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Finisher</th>
+			<th>HP</th>
+			<th></th>
+		</tr>
+
+		<tr>
+			<td><img src={{user.img}} alt={{user.name}} height='50' ></td>
+			<td>{{user.name}}</td>
+			<td>{{user.age}}</td>
+			<td>{{user.finisher}}</td>
+			<td>{{user.hp}}</td>
+			<td><!-- <button ng-click='damage(user._id)'>strike</button> --></td>
+		</tr>
+	</table>
+
+	
+</div>
