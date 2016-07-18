@@ -52,6 +52,7 @@ wrasslin_app.factory('WrasslerFactory',function($http){
 wrasslin_app.controller('WrasslerController',function($scope,$location,$routeParams,WrasslerFactory){
 	
 	$scope.user=$routeParams.user;
+	$scope.view=true;
 
 	WrasslerFactory.index(function(data){
 		$scope.wrasslers=data;
@@ -70,6 +71,8 @@ wrasslin_app.controller('WrasslerController',function($scope,$location,$routePar
 		WrasslerFactory.index(function(data){
 			$scope.wrasslers=data;
 		});
+
+		
 	};
 
 	$scope.choose=function(wrasslersId){
@@ -82,7 +85,8 @@ wrasslin_app.controller('WrasslerController',function($scope,$location,$routePar
 			}	
 			else		
 			{
-				$location.path('/game').search({user:data});
+				$scope.user=data;
+				// $location.path('/game').search({user:data});
 				// WrasslerFactory.indexTemp(function(data){
 				// 	$scope.results=data;
 				// });
